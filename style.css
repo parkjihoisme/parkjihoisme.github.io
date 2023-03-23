@@ -6,8 +6,8 @@
 body {
     --bg: #121212;
     --text: #ffffff;
-    --prim: #f5ff79;
-    --scnd: #929a57;
+    --prim: #82c5ff;
+    --scnd: #656951;
     --scndtext: #454545;
     
     background-color: var(--bg);
