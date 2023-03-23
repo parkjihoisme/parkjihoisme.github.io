@@ -72,6 +72,7 @@ li {
 .container {
     width: 30%;
     min-width: 330px;
+    max-width: 600px;
     position: absolute;
     top: 60px;
     margin-left: 2px;
@@ -82,13 +83,13 @@ li {
 
 .text {
     font-family: 'Gowun Dodum', sans-serif;
-    letter-spacing: 1.23px;
+    letter-spacing: 1.16px;
     opacity: 87%;
     font-size: 15px;
     line-height: 23.8px;
     padding: 0;
-    margin: 0 0 5px 0;
-    word-spacing: -1.7px;
+    margin: 0 0 4px 0;
+    word-spacing: -1.8px;
 
 }
 
@@ -98,8 +99,7 @@ li {
     letter-spacing: 1.2px;
     opacity: 87%;
     font-size: 15px;
-    font-weight: 300;
-    line-height: 21.7px;
+    line-height: 21.3px;
 }
 
 .gallery {
@@ -284,4 +284,5 @@ u {
     .presentation {
         top: 350px;
     }
+    
 }
