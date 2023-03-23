@@ -302,14 +302,7 @@ u {
     }
 
     .presentation {
-        bottom: 15px;
-        height: calc(100vh - 442px);
-    }
-    .grain{
-        width: 100vw;
-    }
-    .vignette{
-        width: 100vw;
+        top: 350px;
     }
     
 }
