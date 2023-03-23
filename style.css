@@ -301,8 +301,12 @@ u {
         top: 55.5px;
     }
 
-    .presentation {
-        top: 350px;
+     .presentation {
+        top: 340px;
+        width: 95vw;
+        height:  calc(90vh - 340px);
+
     }
+    
     
 }
