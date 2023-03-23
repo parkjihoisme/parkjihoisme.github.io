@@ -6,9 +6,10 @@
 body {
     --bg: #121212;
     --text: #ffffff;
-    --prim: #e9ff44;
-    --scnd: #303600;
-
+    --prim: #f5ff79;
+    --scnd: #929a57;
+    --scndtext: #454545;
+    
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Gowun Dodum', sans-serif;
@@ -67,12 +68,18 @@ li {
 
 .menu-link {
     padding: 10px;
+    color: var(--scndtext);
+
+}
+.menu-link:hover{
+    color: var(--scnd);
+    
 }
 
 .container {
     width: 30%;
     min-width: 330px;
-    max-width: 600px;
+    max-width: 500px;
     position: absolute;
     top: 60px;
     margin-left: 2px;
@@ -81,9 +88,17 @@ li {
 
 }
 
+.pt.two:hover{
+    visibility: hidden;
+}
+
+#one:hover ~{
+    color: var(--prim);
+}
+
 .text {
     font-family: 'Gowun Dodum', sans-serif;
-    letter-spacing: 1.16px;
+    letter-spacing: 1.13px;
     opacity: 87%;
     font-size: 15px;
     line-height: 23.8px;
@@ -95,7 +110,7 @@ li {
 
 
 .text.en {
-    color: var(--prim);
+    color: var(--scnd);
     letter-spacing: 1.2px;
     opacity: 87%;
     font-size: 15px;
@@ -144,6 +159,7 @@ u {
 }
 
 .presentation {
+    visibility: hidden;
     position: absolute;
     top: 360px;
     left: 50%;
@@ -156,11 +172,15 @@ u {
 }
 
 .presentation.bg {
+        visibility: hidden;
+
     background-color: black;
     box-shadow: 0px 0px 30px 15px black;
 }
 
-.presentation img {
+.pt {
+        visibility: hidden;
+
     opacity: 90%;
     position: absolute;
     top: 50%;
@@ -191,7 +211,7 @@ u {
     position: absolute;
     top: -5%;
     left: -5%;
-    opacity: .1;
+    opacity: .12;
     background: url('./grain.jpg');
     -webkit-animation: grain 0.5s steps(1) infinite;
     animation: grain 0.5s steps(1) infinite;
@@ -282,7 +302,14 @@ u {
     }
 
     .presentation {
-        top: 350px;
+        bottom: 15px;
+        height: calc(100vh - 442px);
+    }
+    .grain{
+        width: 100vw;
+    }
+    .vignette{
+        width: 100vw;
     }
     
 }
