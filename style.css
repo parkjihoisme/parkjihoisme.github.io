@@ -74,9 +74,7 @@ li {
     min-width: 330px;
     position: absolute;
     top: 60px;
-    height: 100vh;
     margin-left: 2px;
-
     left: 50%;
     transform: translateX(-50%);
 
@@ -91,7 +89,7 @@ li {
     padding: 0;
     margin: 0 0 5px 0;
     word-spacing: -1.7px;
-    
+
 }
 
 
@@ -104,162 +102,186 @@ li {
     line-height: 21.7px;
 }
 
-.gallery{
+.gallery {
     position: absolute;
-    top:60px;
+    top: 60px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
     justify-content: center;
 
-    width:90vw;
+    width: 90vw;
     margin: 0 5% 0 5%
-
-    
 }
 
-.thumb-img{
-        padding: 30px;
+.thumb-img {
+    padding: 30px;
     text-align: center;
 }
-.thumb-img img{
-    width:300px;
+
+.thumb-img img {
+    width: 300px;
 }
-footer{
+
+footer {
     position: absolute;
     top: 100vh;
 }
 
-.contact{
-    word-spacing: 0px; 
-    }
+.contact {
+    word-spacing: 0px;
+}
 
-u{
+u {
     text-underline-position: under;
 
 }
 
-.pt-container{
+.pt-container {
     display: flex;
-        justify-content: center;
+    justify-content: center;
     align-content: center;
 }
-.presentation{
+
+.presentation {
     position: absolute;
     top: 360px;
-    left:50%;
-    margin-bottom: 10px;
-    width:86vw;
+    left: 50%;
+    margin: 0 0 40px 0;
+    width: 86vw;
     max-width: 720px;
     transform: translateX(-50%);
     aspect-ratio: 16 / 9;
 
 }
-.presentation.bg{
-        background-color: black;
-        box-shadow: 0px 0px 30px 15px black;
+
+.presentation.bg {
+    background-color: black;
+    box-shadow: 0px 0px 30px 15px black;
 }
 
-.presentation img{
+.presentation img {
     opacity: 90%;
-      position: absolute; top:50%; left: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-  width: auto;
-  height: 95%;
+    width: auto;
+    height: 95%;
 
 }
 
-.grain{
-    width:86vw;
+.grain {
+    width: 86vw;
     max-width: 720px;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    
+
 }
-.vignette{
-            box-shadow: 0px 0px 300px 15px rgba(0,0,0,0.2) inset;
+
+.vignette {
+    box-shadow: 0px 0px 300px 15px rgba(0, 0, 0, 0.2) inset;
 
 }
 
 .grain:after {
-  content: '';
-width: 110%;
-  height: 110%;
-  position: absolute;
-  top: -5%;
-  left: -5%;
-  opacity: .09;
-  background: url('./grain.jpg');
-  -webkit-animation: grain 0.5s steps(1) infinite;
-  animation: grain 0.5s steps(1) infinite;
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    opacity: .1;
+    background: url('./grain.jpg');
+    -webkit-animation: grain 0.5s steps(1) infinite;
+    animation: grain 0.5s steps(1) infinite;
 }
+
 @keyframes grain {
-  0%, 100% {
-    transform: translate(0, 0, 0);
-  }
 
-  10% {
-    transform: translate(-1%, -1%);
-  }
+    0%,
+    100% {
+        transform: translate(0, 0, 0);
+    }
 
-  20% {
-    transform: translate(1%, 1%);
-  }
+    10% {
+        transform: translate(-1%, -1%);
+    }
 
-  30% {
-    transform: translate(-2%, -2%);
-  }
+    20% {
+        transform: translate(1%, 1%);
+    }
 
-  40% {
-    transform: translate(3%, 3%);
-  }
+    30% {
+        transform: translate(-2%, -2%);
+    }
 
-  50% {
-    transform: translate(-3%, -3%);
-  }
+    40% {
+        transform: translate(3%, 3%);
+    }
 
-  60% {
-    transform: translate(4%, 4%);
-  }
+    50% {
+        transform: translate(-3%, -3%);
+    }
 
-  70% {
-    transform: translate(-4%, -4%);
-  }
+    60% {
+        transform: translate(4%, 4%);
+    }
 
-  80% {
-    transform: translate(2%, 2%);
-  }
+    70% {
+        transform: translate(-4%, -4%);
+    }
 
-  90% {
-    transform: translate(-3%, -3%);
-  }
-}
+    80% {
+        transform: translate(2%, 2%);
+    }
 
-
-
-
-@media (min-width: 1211px){
-    .presentation{
-            top: 330px;
-
+    90% {
+        transform: translate(-3%, -3%);
     }
 }
-@media (min-width: 1239px){
-    .presentation{
-            top: 310px;
+
+
+
+
+@media (min-width: 1211px) {
+    .presentation {
+        top: 330px;
 
     }
 }
 
-@media (min-width: 1297px){
-    .presentation{
-            top: 290px;
+@media (min-width: 1239px) {
+    .presentation {
+        top: 310px;
 
     }
 }
-@media (min-width: 1869px){
-    .presentation{
-            top: 250px;
 
+@media (min-width: 1297px) {
+    .presentation {
+        top: 290px;
+
+    }
+}
+
+@media (min-width: 1869px) {
+    .presentation {
+        top: 250px;
+
+    }
+}
+
+@media (max-width:480px) {
+    .menu {
+        top: 16.5px;
+    }
+
+    .container {
+        top: 55.5px;
+    }
+
+    .presentation {
+        top: 350px;
     }
 }
