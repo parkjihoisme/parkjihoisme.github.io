@@ -8,6 +8,7 @@ body {
     --text: #ffffff;
     --prim: #82c5ff;
     --scnd: #656951;
+    --thrd: #f49a1f;
     --scndtext: #454545;
     
     background-color: var(--bg);
@@ -39,6 +40,10 @@ a:link,
     color: var(--text);
 }
 
+.menu-link:link{
+    color: var(--scndtext);
+}
+
 a:hover {
     color: var(--prim);
 }
@@ -52,7 +57,6 @@ li {
 }
 
 .menu {
-
     font-size: 18 px;
     letter-spacing: 0.6px;
     display: flex;
@@ -63,7 +67,6 @@ li {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 .menu-link {
@@ -72,7 +75,7 @@ li {
 
 }
 .menu-link:hover{
-    color: var(--scnd);
+    color: var(--thrd);
     
 }
 
@@ -86,6 +89,24 @@ li {
     left: 50%;
     transform: translateX(-50%);
 
+}
+
+.lab-container{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 9px;
+
+}
+.lab-container img{
+    width: calc(100vw - 12px);
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6px;
 }
 
 .pt.two:hover{
@@ -301,12 +322,11 @@ u {
         top: 55.5px;
     }
 
-     .presentation {
+    .presentation {
         top: 328px;
         width: 95vw;
         height:  calc(90vh - 395px);
 
     }
-    
     
 }
