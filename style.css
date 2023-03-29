@@ -4,7 +4,7 @@
 body {
     --bg: #121212;
     --text: #ffffff;
-    --prim: #b6bbbf;
+    --prim: #b3beb4;
     --scnd: #6e746f;
     --scndtext: #8c9b8d;
     --thrd: rgba(255, 255, 255,0.87);
@@ -130,7 +130,7 @@ li {
     letter-spacing: 1.1px;
     opacity: 87%;
     font-size: 15px;
-    line-height: 22.7px;
+    line-height: 23px;
     padding: 0;
     margin: 0 0 5px 0;
     word-spacing: -1.5px;
