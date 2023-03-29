@@ -4,10 +4,13 @@
 body {
     --bg: #121212;
     --text: #ffffff;
-    --prim: rgb(213, 255, 117);
-    --scnd: #5f5e50;
+    --prim: #add3ff;
+    --scnd: #6a746b;
+    --scndtext: #8c9b8d;
     --thrd: rgba(255, 255, 255,0.87);
-    --scndtext: #454545;
+    --menutext: #454545;
+    --line: 0.4px;
+    --linescnd: 0.3px;
     
     background-color: var(--bg);
     color: var(--text);
@@ -39,7 +42,7 @@ a:link,
 }
 
 .menu-link:link{
-    color: var(--scndtext);
+    color: var(--menutext);
 }
 
 a:hover {
@@ -66,15 +69,21 @@ li {
     left: 50%;
     z-index: 99;
     transform: translateX(-50%);
+
+    
 }
 
 .menu-link {
     padding: 10px;
-    color: var(--scndtext);
+        -webkit-text-stroke-width: var(--line);
+    -webkit-text-stroke-color: var(--menutext);
+    color: var(--menutext);
 
 }
 .menu-link:hover{
     color: var(--thrd);
+        -webkit-text-stroke-width: var(--line);
+    -webkit-text-stroke-color: var(--thrd);
     
 }
 
@@ -118,13 +127,13 @@ li {
 
 .text {
     font-family: 'Gowun Dodum', sans-serif;
-    letter-spacing: 1.13px;
+    letter-spacing: 1.1px;
     opacity: 87%;
     font-size: 15px;
-    line-height: 23.8px;
+    line-height: 22.7px;
     padding: 0;
-    margin: 0 0 4px 0;
-    word-spacing: -1.8px;
+    margin: 0 0 5px 0;
+    word-spacing: -1.5px;
 
 }
 
@@ -132,10 +141,17 @@ li {
 
 .text.en {
     color: var(--scnd);
-    letter-spacing: 1.2px;
+    letter-spacing: 1.1px;
+    word-spacing: -2px;
+
     opacity: 87%;
     font-size: 15px;
-    line-height: 21.3px;
+    line-height: 20.4px;
+        margin: 1px 0 4px 0;
+    
+        -webkit-text-stroke-width: var(--linescnd);
+    -webkit-text-stroke-color: var(--scnd);
+
 }
 
 .gallery {

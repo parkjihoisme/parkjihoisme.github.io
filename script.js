@@ -3,9 +3,19 @@ var two = document.getElementById('two');
 var three = document.getElementById('three');
 var four = document.getElementById('four');
 
+var ein = document.getElementById('ein');
+var zwei = document.getElementById('zwei');
+var drei = document.getElementById('drei');
+var vier = document.getElementById('vier');
+
+
 var presentation = document.getElementsByClassName('presentation');
 var ptContainer = document.getElementsByClassName('pt-container');
+
+
 var imgList = [one, two, three, four]
+var enList = [ein, zwei, drei, vier]
+
 
 
 let getSiblings = function (e) {
@@ -25,9 +35,22 @@ let getSiblings = function (e) {
 
 
 function presentationOpen(e) {
-        var className = e.target.id;
+        
+    var className = e.target.id;
+    
+    for (i = 0; i < enList.length; i++) {
+        if(className == imgList[i].id){
+            e.target.style.color = 'var(--prim)'
 
-    e.target.style.color = 'var(--prim)'
+        }
+        else if(className == enList[i].id){
+            e.target.style.color = 'var(--scndtext)'
+            className = imgList[i].id
+            console.log(className)
+        }
+        
+    }
+
     
     for (i = 0; i < presentation.length; i++) {
         presentation[i].style.visibility = 'visible'
@@ -40,8 +63,18 @@ function presentationOpen(e) {
 function presentationClosed(e) {
         var className = e.target.id;
 
-    
-    e.target.style.color = 'var(--text)'
+    for (i = 0; i < enList.length; i++) {
+        if(className == imgList[i].id){
+            e.target.style.color = 'var(--text)'
+
+        }
+        else if(className == enList[i].id){
+            e.target.style.color = 'var(--scnd)'
+            className = imgList[i].id
+            console.log(className)
+        }
+    }
+
     for (i = 0; i < presentation.length; i++) {
         presentation[i].style.visibility = 'hidden'
     }
@@ -57,16 +90,19 @@ function presentationTouch(e){
     let siblings = getSiblings(document.getElementsByClassName(className)[0]);
     
     
-    console.log(siblings)
+    for (i = 0; i < enList.length; i++) {
+        imgList[i].style.color = 'var(--text)'
+        enList[i].style.color = 'var(--sncd)'
 
-    
-    one.style.color = 'var(--text)'
-    two.style.color = 'var(--text)'
-    three.style.color = 'var(--text)'
-    four.style.color = 'var(--text)'
-    
-    e.target.style.color = 'var(--prim)'
-    
+        if(className == imgList[i].id){
+            e.target.style.color = 'var(--prim)'
+        }
+        else if(className == enList[i].id){
+            e.target.style.color = 'var(--scndtext)'
+            className = imgList[i].id
+        }
+    }
+        
     for (i = 0; i < presentation.length; i++) {
         presentation[i].style.visibility = 'visible'
     }
@@ -82,4 +118,10 @@ for (i = 0; i < imgList.length; i++) {
     imgList[i].addEventListener('touchstart', presentationTouch)
     imgList[i].addEventListener('mouseover', presentationOpen)
     imgList[i].addEventListener('mouseout', presentationClosed)
+    enList[i].addEventListener('touchstart', presentationTouch)
+    enList[i].addEventListener('mouseover', presentationOpen)
+    enList[i].addEventListener('mouseout', presentationClosed)
 }
+
+
+
