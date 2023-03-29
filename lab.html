@@ -1,65 +1,158 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <title>Yes, it's me</title>
     <link href="./style.css" rel="stylesheet" type="text/css" />
-    
-            <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<style>
-    .menu{
-        position: fixed;
-    }
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <style>
+        .menu {
+            position: fixed;
+        }
     </style>
 </head>
+
 <body>
-   
-   <ul class="menu">
+
+    <ul class="menu">
         <li class="menu-item"><a href="./works.html" class="menu-link">works</a></li>
-        <li class="menu-item"><a href="./lab.html" style="color: var(--thrd)"class="menu-link">lab</a></li>
+        <li class="menu-item"><a href="./lab.html" style="color: var(--thrd); -webkit-text-stroke-width: var(--line); -webkit-text-stroke-color: var(--thrd);" class="menu-link">lab</a></li>
         <li class="menu-item"><a href="./blog.html" class="menu-link">blog</a></li>
         <li class="menu-item"><a href="./about.html" class="menu-link">about</a></li>
     </ul>
-      
-    
-       
-<div class="lab-container">
-       
-<!--            
+
+
+
+    <div class="lab-container">
+
+        <!--            
                        <img src="./BVB-Scan-2.jpg"alt="">
            
                        <img src="./PierGIF-2b.gif"alt=""> -->
+        <img src="./lab/paper/0/1.jpg" alt="">
 
-            <img src="./lab/paper/0/1.jpg" alt="">
+        <div class="new-lab">
+
+
+        </div>
+
+        <div class="hide">
+            <div class="lab-item">
+
+                <img src="./lab/paper/1/1.jpg" alt="">
+
+                <img src="./lab/paper/1/2.jpg" alt="">
+                <img src="./lab/paper/1/1.gif" alt="">
+
+            </div>
+            <div class="lab-item">
+                <img src="./lab/paper/2/1.jpg" alt="">
+                <img src="./lab/paper/2/2.jpg" alt="">
+
+
+                <img src="./lab/paper/2/2-min.gif" alt="">
+            </div>
+
+            <div class="lab-item">
+                <img src="./lab/paper/3/1.jpg" alt="">
+                <img src="./lab/paper/3/2.jpg" alt="">
+
+
+                <img src="./lab/paper/3/3.gif" alt="">
+                <img src="./lab/paper/3/11.jpg" alt="">
+
+            </div>
             
-            <img src="./lab/paper/1/1.jpg" alt="">
-
-            <img src="./lab/paper/1/2.jpg" alt="">
-            <img src="./lab/paper/1/1.gif" alt="">
-
-            <img src="./lab/paper/2/1.jpg" alt="">
-            <img src="./lab/paper/2/2.jpg" alt="">
-
-
-            <img src="./lab/paper/2/2-min.gif" alt="">
-            <img src="./lab/paper/3/1.jpg" alt="">
-            <img src="./lab/paper/3/2.jpg" alt="">
-
-
-            <img src="./lab/paper/3/3.gif" alt="">
-            <img src="./lab/paper/3/11.jpg" alt="">
-
             
+
+
+
+        </div>
+
+
+
+
+        <span class="loadmore text" onclick="loadMore()">
+            Load more...
+        </span>
+
 
 
 
 
 
     </div>
-    
+
 
     <script src="./script.js"></script>
 
-</body>
-</html>
+    <script>
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
+        let randomIndexArray = [];
+        var items = document.getElementsByClassName('lab-item');
+        var newLab = document.getElementsByClassName('new-lab');
+        var hide = document.getElementsByClassName('hide');
+        var listLength = 2;
+        var randomNum = 0;
+        var num = 1
+        var load = document.getElementsByClassName('loadmore');
+
+        window.onload = function() {
+            if (items.length <= listLength) {
+                load[0].style.display = 'none'
+            }
+
+
+            for (i = 0; i < items.length; i++) {
+                randomNum = Math.floor(Math.random() * items.length)
+                if (randomIndexArray.indexOf(randomNum) === -1) {
+                    randomIndexArray.push(randomNum)
+                } else {
+                    i--
+                }
+            }
+
+
+            for (i = 1; i < items.length; i++) {
+                items[randomIndexArray[i - 1]].after(items[randomIndexArray[i]])
+            }
+
+            for (i = listLength * num; i < items.length; i++) {
+                items[i].style.display = 'none';
+            }
+
+        }
+
+        function loadMore() {
+
+
+            if (items.length <= listLength * (num + 1)) {
+                for (i = listLength * num; i < items.length; i++) {
+
+                    items[i].style.display = 'block';
+                }
+                load[0].style.display = 'none'
+
+                num += 1
+            } else {
+                for (i = listLength * num; i < listLength * (num + 1); i++) {
+
+                items[i].style.display = 'block';
+
+
+                }
+                num += 1
+
+            }
+
+
+
+        }
+    </script>
+
+</body></html>

@@ -253,6 +253,9 @@ u {
     -webkit-animation: grain 0.5s steps(1) infinite;
     animation: grain 0.5s steps(1) infinite;
 }
+.loadmore{
+    padding: 15px;
+}
 
 @keyframes grain {
 
