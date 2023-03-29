@@ -120,6 +120,11 @@
 
             for (i = 1; i < items.length; i++) {
                 items[randomIndexArray[i - 1]].after(items[randomIndexArray[i]])
+
+            }
+            for (i = 0; i < items.length; i++) {
+                
+                items[i].style.display = 'block';
             }
 
             for (i = listLength * num; i < items.length; i++) {

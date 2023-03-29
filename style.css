@@ -4,8 +4,8 @@
 body {
     --bg: #121212;
     --text: #ffffff;
-    --prim: #add3ff;
-    --scnd: #6a746b;
+    --prim: #b6bbbf;
+    --scnd: #6e746f;
     --scndtext: #8c9b8d;
     --thrd: rgba(255, 255, 255,0.87);
     --menutext: #454545;
@@ -255,6 +255,10 @@ u {
 }
 .loadmore{
     padding: 15px;
+}
+
+.lab-item{
+    display: none;
 }
 
 @keyframes grain {
