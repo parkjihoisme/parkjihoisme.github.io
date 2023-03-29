@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 
 body {
     --bg: #121212;
     --text: #ffffff;
-    --prim: #82c5ff;
-    --scnd: #5e6055;
-    --thrd: #828868;
+    --prim: rgb(213, 255, 117);
+    --scnd: #5f5e50;
+    --thrd: rgba(255, 255, 255,0.87);
     --scndtext: #454545;
     
     background-color: var(--bg);
@@ -129,6 +127,7 @@ li {
     word-spacing: -1.8px;
 
 }
+
 
 
 .text.en {
