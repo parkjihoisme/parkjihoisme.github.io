@@ -99,7 +99,6 @@ li {
     margin-left: 2px;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 
@@ -215,25 +214,36 @@ opacity: 95%;
     font-family: 'Gowun Dodum', sans-serif;
     letter-spacing: 1.1px;
     opacity: 87%;
-    font-size: 15px;
-    line-height: 23px;
+    font-size: 14.8px;
+    line-height: 22.2px;
     padding: 0;
-    margin: 0 0 5px 0;
-    word-spacing: -1.5px;
+    margin: 0 0 4px 0;
+    word-spacing: -1px;
 
 }
 
 
+.title{
+   text-align: center;
+        margin-bottom: 8px;
+
+}
+
+.subtitle{
+
+    font-size: 12px;
+        margin-bottom: 8px;
+    line-height: 16px;
+
+}
 
 .text.en {
     color: var(--scnd);
     letter-spacing: 1.1px;
     word-spacing: -2px;
-
-    opacity: 87%;
-    font-size: 15px;
-    line-height: 20.4px;
-    margin: 1px 0 4px 0;
+    font-size: 14.5px;
+    line-height: 20.7px;
+    margin: 3px 0 2px 0;
 
     -webkit-text-stroke-width: var(--linescnd);
     -webkit-text-stroke-color: var(--scnd);
