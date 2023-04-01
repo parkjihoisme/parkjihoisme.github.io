@@ -105,13 +105,20 @@ li {
 
 
 .lab-container {
+    width: 100vw;
     position: absolute;
     top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     line-height: 9px;
+    margin-left: 6px;
 
+}
+.lab-item{
+    display: flex;
+    flex-direction: row;
+        overflow: scroll;
+        margin: 0 6px 0 0px;
+    
 }
 
 .wrk-container {
@@ -198,7 +205,7 @@ opacity: 95%;
 
 
 .lab-container img {
-    width: calc(100vw - 12px);
+    width: calc(100vw - 24px);
     max-width: 500px;
     height: auto;
     display: flex;
