@@ -7,11 +7,11 @@ body {
     --prim: #b3beb4;
     --scnd: #6e746f;
     --scndtext: #8c9b8d;
-    --thrd: rgba(255, 255, 255,0.87);
+    --thrd: rgba(255, 255, 255, 0.87);
     --menutext: #454545;
     --line: 0.4px;
     --linescnd: 0.3px;
-    
+
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Gowun Dodum', sans-serif;
@@ -41,7 +41,7 @@ a:link,
     color: var(--text);
 }
 
-.menu-link:link{
+.menu-link:link {
     color: var(--menutext);
 }
 
@@ -70,24 +70,27 @@ li {
     z-index: 99;
     transform: translateX(-50%);
 
-    
+
 }
 
 .menu-link {
     padding: 10px;
-        -webkit-text-stroke-width: var(--line);
+    -webkit-text-stroke-width: var(--line);
     -webkit-text-stroke-color: var(--menutext);
     color: var(--menutext);
 
 }
-.menu-link:hover{
+
+.menu-link:hover {
     color: var(--thrd);
-        -webkit-text-stroke-width: var(--line);
+    -webkit-text-stroke-width: var(--line);
     -webkit-text-stroke-color: var(--thrd);
-    
+
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     width: 30%;
     min-width: 330px;
     max-width: 500px;
@@ -99,7 +102,9 @@ li {
 
 }
 
-.lab-container{
+
+
+.lab-container {
     position: absolute;
     top: 60px;
     left: 50%;
@@ -108,7 +113,79 @@ li {
     line-height: 9px;
 
 }
-.lab-container img{
+
+.wrk-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(600px, 1fr));
+    grid-gap: 1em;
+    background: black;
+    left: 50%;
+    margin: 40px 0 25px 0;
+    width: 85vw;
+    transform: translateX(-50%);
+    aspect-ratio: 16 / 9;
+    background-color: #000000;
+    box-shadow: 0px 0px 20px 12px rgba(40, 49, 37, 0.56);
+    gap:0px;
+}
+
+
+.wrk-container::after{
+    position: absolute;
+    content: "";
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0px 0px 20px 12px rgba(47, 64, 25, 0.4) inset;
+    pointer-events: none; 
+}
+.wrk-container:last-child{
+ padding-bottom: 0px;   
+}
+
+@media (max-width:1800px){
+    .wrk-container {grid-template-columns: repeat(2, minmax(600px, 1fr));
+        width: 90vw;
+}
+    
+}
+
+@media (max-width:1412px){
+    .wrk-container {grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+    
+}
+
+@media (max-width:880px){
+    .wrk-container {grid-template-columns: repeat(auto-fill, minmax(90vw, 1fr));
+}
+    
+}
+
+.wrk-vignette{
+    position: relative;
+    z-index: 999;
+    background: redl
+    width: 100%;
+    height: 100%;
+        box-shadow: 0px 0px 30px 15px #35362c inset;
+
+}
+
+
+
+.wrk-container img {
+opacity: 95%;
+    width: 100%;
+    height: auto;
+    padding:0;
+    margin:0;
+
+}
+
+.lab-container img {
     width: calc(100vw - 12px);
     max-width: 500px;
     height: auto;
@@ -117,11 +194,11 @@ li {
     padding-bottom: 6px;
 }
 
-.pt.two:hover{
+.pt.two:hover {
     visibility: hidden;
 }
 
-#one:hover ~{
+#one:hover ~ {
     color: var(--prim);
 }
 
@@ -147,9 +224,9 @@ li {
     opacity: 87%;
     font-size: 15px;
     line-height: 20.4px;
-        margin: 1px 0 4px 0;
-    
-        -webkit-text-stroke-width: var(--linescnd);
+    margin: 1px 0 4px 0;
+
+    -webkit-text-stroke-width: var(--linescnd);
     -webkit-text-stroke-color: var(--scnd);
 
 }
@@ -198,9 +275,8 @@ u {
 .presentation {
     visibility: hidden;
     position: absolute;
-    top: 360px;
     left: 50%;
-    margin: 0 0 40px 0;
+    margin: 40px 0 40px 0;
     width: 86vw;
     max-width: 720px;
     transform: translateX(-50%);
@@ -209,14 +285,14 @@ u {
 }
 
 .presentation.bg {
-        visibility: hidden;
+    visibility: hidden;
 
     background-color: black;
     box-shadow: 0px 0px 30px 15px black;
 }
 
 .pt {
-        visibility: hidden;
+    visibility: hidden;
 
     opacity: 90%;
     position: absolute;
@@ -253,13 +329,12 @@ u {
     -webkit-animation: grain 0.5s steps(1) infinite;
     animation: grain 0.5s steps(1) infinite;
 }
-.loadmore{
+
+.loadmore {
     padding: 15px;
 }
 
-.lab-item{
-    display: none;
-}
+
 
 @keyframes grain {
 
@@ -307,35 +382,6 @@ u {
 
 
 
-
-@media (min-width: 1211px) {
-    .presentation {
-        top: 330px;
-
-    }
-}
-
-@media (min-width: 1239px) {
-    .presentation {
-        top: 310px;
-
-    }
-}
-
-@media (min-width: 1297px) {
-    .presentation {
-        top: 290px;
-
-    }
-}
-
-@media (min-width: 1869px) {
-    .presentation {
-        top: 250px;
-
-    }
-}
-
 @media (max-width:480px) {
     .menu {
         top: 16.5px;
@@ -346,10 +392,9 @@ u {
     }
 
     .presentation {
-        top: 328px;
-        width: 95vw;
-        height:  calc(90vh - 395px);
+        margin: 25px 0 0 0;
+        height: calc(100vh - 420px);
 
     }
-    
+
 }

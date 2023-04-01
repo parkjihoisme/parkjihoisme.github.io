@@ -39,7 +39,6 @@
 
         </div>
 
-        <div class="hide">
             <div class="lab-item">
 
                 <img src="./lab/paper/1/1.jpg" alt="">
@@ -57,107 +56,26 @@
             </div>
 
             <div class="lab-item">
-                <img src="./lab/paper/3/1.jpg" alt="">
-                <img src="./lab/paper/3/2.jpg" alt="">
+                <img src="./lab/paper/3/1_1.jpg" alt="">
+                <img src="./lab/paper/3/2_1.jpg" alt="">
 
 
-                <img src="./lab/paper/3/3.gif" alt="">
-                <img src="./lab/paper/3/11.jpg" alt="">
-
-            </div>
-            
-            
-
-
+                <img src="./lab/paper/3/3_1.gif" alt="">
+                <img src="./lab/paper/3/11_1.jpg" alt="">
 
         </div>
 
-
-
-
+<!-- 
         <span class="loadmore text" onclick="loadMore()">
             Load more...
         </span>
 
-
-
-
-
-
+ -->
     </div>
 
 
     <script src="./script.js"></script>
 
-    <script>
-        function shuffle(array) {
-            array.sort(() => Math.random() - 0.5);
-        }
-        let randomIndexArray = [];
-        var items = document.getElementsByClassName('lab-item');
-        var newLab = document.getElementsByClassName('new-lab');
-        var hide = document.getElementsByClassName('hide');
-        var listLength = 2;
-        var randomNum = 0;
-        var num = 1
-        var load = document.getElementsByClassName('loadmore');
-
-        window.onload = function() {
-            if (items.length <= listLength) {
-                load[0].style.display = 'none'
-            }
-
-
-            for (i = 0; i < items.length; i++) {
-                randomNum = Math.floor(Math.random() * items.length)
-                if (randomIndexArray.indexOf(randomNum) === -1) {
-                    randomIndexArray.push(randomNum)
-                } else {
-                    i--
-                }
-            }
-
-
-            for (i = 1; i < items.length; i++) {
-                items[randomIndexArray[i - 1]].after(items[randomIndexArray[i]])
-
-            }
-            for (i = 0; i < items.length; i++) {
-                
-                items[i].style.display = 'block';
-            }
-
-            for (i = listLength * num; i < items.length; i++) {
-                items[i].style.display = 'none';
-            }
-
-        }
-
-        function loadMore() {
-
-
-            if (items.length <= listLength * (num + 1)) {
-                for (i = listLength * num; i < items.length; i++) {
-
-                    items[i].style.display = 'block';
-                }
-                load[0].style.display = 'none'
-
-                num += 1
-            } else {
-                for (i = listLength * num; i < listLength * (num + 1); i++) {
-
-                items[i].style.display = 'block';
-
-
-                }
-                num += 1
-
-            }
-
-
-
-        }
-    </script>
+    
 
 </body></html>
