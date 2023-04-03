@@ -235,7 +235,7 @@ opacity: 95%;
       transition-property: color;
 
 
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
 
 }
 
@@ -271,7 +271,7 @@ opacity: 95%;
           transition-property: color;
 
 
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
     
 
 }
@@ -330,7 +330,7 @@ u {
   transition-property: opacity;
 
 
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
     
 }
 
