@@ -21,6 +21,10 @@ var originY = 0;
 var currentY = 0;
 var diff = 0
 
+
+
+
+
 window.addEventListener('scroll', () => {
     currentY = window.scrollY
     diff = Math.abs(originY - currentY)
@@ -28,20 +32,18 @@ window.addEventListener('scroll', () => {
     if (diff > 6) {
         for (i = 0; i < presentaion.length; i++) {
             presentaion[i].style.opacity = 0;
-            
+
         }
-        
+
         for (i = 0; i < enList.length; i++) {
-        imgList[i].style.color = 'var(--text)'
-        enList[i].style.color = 'var(--scnd)'
+
+            imgList[i].style.color = 'var(--text)'
+            enList[i].style.color = 'var(--scnd)'
         }
-        
-        document.getElementById('focus').focus();
-        console.log('out')
-        
+
     }
-        
-    
+
+
 });
 
 
@@ -82,9 +84,8 @@ function presentationOpen(e) {
         } else if (className == enList[i].id) {
             e.target.style.color = 'var(--scndtext)'
             className = imgList[i].id
-            console.log('dodo')
         }
-        
+
     }
 
 
@@ -116,13 +117,15 @@ function presentationClosed(e) {
     }
 
     document.getElementsByClassName(className)[0].style.visibility = 'hidden'
-    
 
 }
 
 
 function presentationTouch(e) {
     var className = e.target.id;
+
+    let siblings = getSiblings(document.getElementsByClassName(className)[0]);
+
 
     for (i = 0; i < enList.length; i++) {
         imgList[i].style.color = 'var(--text)'
@@ -136,9 +139,6 @@ function presentationTouch(e) {
         }
     }
 
-    let siblings = getSiblings(document.getElementsByClassName(className)[0]);
-
-    
     for (i = 0; i < presentation.length; i++) {
         presentation[i].style.visibility = 'visible';
         presentation[i].style.opacity = '1';
@@ -149,18 +149,51 @@ function presentationTouch(e) {
     }
 
     document.getElementsByClassName(className)[0].style.visibility = 'visible'
+
+}
+
+function focusOut() {
+    console.log('soso')
+
+    for (i = 0; i < enList.length; i++) {
+        imgList[i].blur()
+        enList[i].blur()
+
+    }
+}
+
+function detectMobileDevice(agent) {
+    const mobileRegex = [
+    /Android/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i
+  ]
+    return mobileRegex.some(mobile => agent.match(mobile))
+}
+const isMobile = detectMobileDevice(window.navigator.userAgent)
+if (isMobile) {
+
+
+    for (i = 0; i < imgList.length; i++) {
+
+        imgList[i].addEventListener('touchstart', presentationOpen)
+        imgList[i].addEventListener('touchend', presentationClosed)
+        enList[i].addEventListener('touchstart', presentationOpen)
+        enList[i].addEventListener('touchend', presentationClosed)
+    }
+
     
+} else {
+    for (i = 0; i < imgList.length; i++) {
+
+        imgList[i].addEventListener('mouseover', presentationOpen)
+        imgList[i].addEventListener('mouseout', presentationClosed)
+        enList[i].addEventListener('mouseover', presentationOpen)
+        enList[i].addEventListener('mouseout', presentationClosed)
+    }
+
+
 }
-
-
-
-for (i = 0; i < imgList.length; i++) {
-
-    imgList[i].addEventListener('mouseover', presentationOpen)
-    imgList[i].addEventListener('mouseout', presentationClosed)
-    enList[i].addEventListener('mouseover', presentationOpen)
-    enList[i].addEventListener('mouseout', presentationClosed)
-
-}
-
-

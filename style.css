@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 
+
 body {
     --bg: #121212;
     --text: #ffffff;
@@ -19,6 +20,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -232,10 +234,6 @@ opacity: 95%;
     padding: 0;
     margin: 3px 0 2px 0;
     word-spacing: -1px;
-      transition-property: color;
-
-
-  transition-duration: 0.2s;
 
 }
 
@@ -367,6 +365,11 @@ u {
 
 }
 
+#one{
+       /*  animation: blink 0.4s 1.5;
+            -webkit-animation: blink 0.4s 1.5;
+          transition-duration: 0s; */
+}
 .grain:after {
     content: '';
     width: 110%;
@@ -428,6 +431,34 @@ u {
     90% {
         transform: translate(-3%, -3%);
     }
+}
+
+@keyframes blink {
+    0%{
+        color: var(--scnd);
+    }
+    24%{
+        color: var(--scnd);
+
+    }
+    25%{
+        color: var(--text);
+    }49%{
+        color: var(--text);
+    }
+    50%{
+        color: var(--scnd);
+    }74%{
+        color: var(--scnd);
+    }
+    75%{
+        color: var(--text);
+    }99%{
+        color: var(--text);
+    }
+    
+
+    
 }
 
 
