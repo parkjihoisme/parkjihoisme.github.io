@@ -235,6 +235,11 @@ opacity: 95%;
     margin: 3px 0 2px 0;
     word-spacing: -1px;
 
+      -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+      
 }
 
 
@@ -302,6 +307,10 @@ footer {
 
 .contact {
     word-spacing: 0px;
+      -webkit-user-select:all;
+  -moz-user-select:all;
+  -ms-user-select:all;
+  user-select:all
 }
 
 u {
