@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
+
+
 </head>
 
 <body>
@@ -54,17 +56,17 @@
         
       
       <div class="wrk-image-container">
-        <div class="presentation bg">
+        <div class="presentation bg" style=" aspect-ratio: 16/9;">
             <div class="pt-container">
                 <img class="pt one" src="/about/1.png" alt="">
                 <img class="pt two" src="/about/2.jpg" alt="">
-                <img class="pt three" src="/about/3.jpg" alt="">
-                <img class="pt four" src="/about/4.jpg" alt="">
+                <img class="pt three" src="" alt="">
+                <img class="pt four" src="" alt="">
 
             </div>
         </div>
-        <div class="presentation grain"></div>
-        <div class="presentation vignette"></div>
+        <div class="presentation grain" style=" aspect-ratio: 16/9;"></div>
+        <div class="presentation vignette" style=" aspect-ratio: 16/9;"></div>
     </div>
         
         
@@ -73,7 +75,33 @@
 
 
     <script src="/script.js"></script>
+    <script>
+        var presentaion = document.getElementsByClassName('presentation');
+        var wrkContainer = document.getElementsByClassName('wrk-image-container');
+        var textbox = document.getElementsByClassName('text-container');
+        var heightNum = 180 + textbox[0].clientHeight;
+        var heightStyle = 'calc(100vh - ' + heightNum + 'px)';
+        var wrkTop = textbox[0].clientHeight  + 5 + 'px';
+        
+            
+        if(matchMedia('(max-width:480px)').matches){
+            
+            for (i=0; i<presentaion.length; i++){
+                presentaion[i].style.height = heightStyle
+            }
+            wrkContainer[0].style.top = wrkTop;
+            
+        }
+        
+    
+        
+        
+        
+    
+    </script>
 
 </body>
 
 </html>
+
+
