@@ -232,6 +232,10 @@ opacity: 95%;
     padding: 0;
     margin: 3px 0 2px 0;
     word-spacing: -1px;
+      transition-property: color;
+
+
+  transition-duration: 0.1s;
 
 }
 
@@ -263,6 +267,12 @@ opacity: 95%;
 
     -webkit-text-stroke-width: var(--linescnd);
     -webkit-text-stroke-color: inherit;
+    
+          transition-property: color;
+
+
+  transition-duration: 0.1s;
+    
 
 }
 
@@ -317,7 +327,11 @@ u {
     transform: translateX(-50%);
     aspect-ratio: 16 / 9;
     z-index: 999;
+  transition-property: opacity;
 
+
+  transition-duration: 0.1s;
+    
 }
 
 .presentation.bg {
@@ -431,16 +445,18 @@ u {
         margin: 25px 0 0 0;
         height: calc(100vh - 445px);
         width: 100vw;
-            aspect-ratio: none;
-
+        aspect-ratio: 1.1/1;
     }
     .grain{
         width: 100vw;
+        aspect-ratio: 1.1/1;
+
     }
     .wrk-container{
             margin: 25px 0 25px 0;
 
     }
+
 
     
 
