@@ -36,6 +36,9 @@ window.addEventListener('scroll', () => {
         enList[i].style.color = 'var(--scnd)'
         }
         
+        document.getElementById('focus').focus();
+        console.log('out')
+        
     }
         
     
@@ -79,9 +82,9 @@ function presentationOpen(e) {
         } else if (className == enList[i].id) {
             e.target.style.color = 'var(--scndtext)'
             className = imgList[i].id
-            console.log(className)
+            console.log('dodo')
         }
-
+        
     }
 
 
@@ -105,7 +108,6 @@ function presentationClosed(e) {
         } else if (className == enList[i].id) {
             e.target.style.color = 'var(--scnd)'
             className = imgList[i].id
-            console.log(className)
         }
     }
 
@@ -114,15 +116,13 @@ function presentationClosed(e) {
     }
 
     document.getElementsByClassName(className)[0].style.visibility = 'hidden'
+    
 
 }
 
 
 function presentationTouch(e) {
     var className = e.target.id;
-
-    let siblings = getSiblings(document.getElementsByClassName(className)[0]);
-
 
     for (i = 0; i < enList.length; i++) {
         imgList[i].style.color = 'var(--text)'
@@ -136,6 +136,9 @@ function presentationTouch(e) {
         }
     }
 
+    let siblings = getSiblings(document.getElementsByClassName(className)[0]);
+
+    
     for (i = 0; i < presentation.length; i++) {
         presentation[i].style.visibility = 'visible';
         presentation[i].style.opacity = '1';
@@ -152,12 +155,12 @@ function presentationTouch(e) {
 
 
 for (i = 0; i < imgList.length; i++) {
-    imgList[i].addEventListener('touchstart', presentationTouch)
+
     imgList[i].addEventListener('mouseover', presentationOpen)
     imgList[i].addEventListener('mouseout', presentationClosed)
-    enList[i].addEventListener('touchstart', presentationTouch)
     enList[i].addEventListener('mouseover', presentationOpen)
     enList[i].addEventListener('mouseout', presentationClosed)
+
 }
 
 
