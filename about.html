@@ -37,7 +37,7 @@
             </p>
             <div class="text contact">
                 <a class="text en">-</a><a style="margin-left: -4.7px;">-</a><br>
-                <a href="https://www.instagram.com/leezo_wrk" target="_blank">@leezo_wrk</a> &nbsp;<a>leezo7547@gmail.com </a>
+                <a href="https://www.instagram.com/leezo_wrk" target="_blank" >@leezo_wrk</a> &nbsp;<a onclick="copy()">leezo7547@gmail.com </a>
             </div>
 
         </div>
@@ -63,6 +63,24 @@
 
 
     <script src="./script.js"></script>
+    <script>
+    
+        
+        function copyToClipboard(val) {
+            const t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = val;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+        }
+
+        function copy() {
+            copyToClipboard('leezo7547@gmail.com');
+            alert("Yes, the E-mail address has been copied.")
+
+        }
+    </script>
 
 
 </body></html>
