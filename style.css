@@ -182,10 +182,11 @@ li {
     font-size: 15px;
     gap: 30px;
     text-align: center;
-    text-decoration: underline 2.2px dotted;
+    
+/*     text-decoration: underline 2.2px dotted;
     text-underline-offset: 6px;
     -webkit-text-decoration: underline 2.2px dotted #84FE23;
-    -webkit-text-underline-offset: 6px;
+    -webkit-text-underline-offset: 6px; */
     
     
     
@@ -193,8 +194,7 @@ li {
 
 .index a:hover > span{
     color: #84FE23;
-    text-decoration: underline 2.2px dotted #84FE23;
-      -webkit-text-decoration: underline 2.2px dotted #84FE23;
+    border-bottom: 2.2px dotted #84FE23;
 
 }
 
@@ -208,7 +208,9 @@ li {
 
 .index span{
         color: var(--text);
-    opacity: 87%;
+        opacity: 87%;
+        border-bottom: 2.2px dotted;
+
 }
 
 
