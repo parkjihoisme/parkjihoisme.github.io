@@ -184,6 +184,9 @@ li {
     text-align: center;
     text-decoration: underline 2.2px dotted;
     text-underline-offset: 6px;
+    -webkit-text-decoration: underline 2.2px dotted #84FE23;
+    -webkit-text-underline-offset: 6px;
+    
     
     
 }
@@ -191,6 +194,8 @@ li {
 .index a:hover > span{
     color: #84FE23;
     text-decoration: underline 2.2px dotted #84FE23;
+      -webkit-text-decoration: underline 2.2px dotted #84FE23;
+
 }
 
 .index a:hover > .wrk-t > .wrk-thumb{
