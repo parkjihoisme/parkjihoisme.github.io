@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
+<style>
+    #one{
+       animation: blink 5.5s infinite;
+            -webkit-animation: blink  5.5s infinite;
+          transition-duration: 0.1s;
+        transition-property: color;
+
+
+}
+    
+    
+    </style>
+
 </head>
 
 <body>
@@ -80,6 +93,25 @@
             alert("Yes, the E-mail address has been copied.")
 
         }
+        
+
+        function textAnimation(){
+                one.style.webkitAnimationDuration = '0s';
+            one.style.animationDuration = '0s'
+            
+        }
+        
+        for (i = 0; i < imgList.length; i++) {
+
+        imgList[i].addEventListener('touchstart', textAnimation)
+        imgList[i].addEventListener('mouseover', textAnimation)
+        enList[i].addEventListener('touchstart', textAnimation)
+        enList[i].addEventListener('mouseover', textAnimation)
+    }
+        
+
+        
+        
     </script>
 
 
