@@ -5,12 +5,12 @@
 body {
     --bg: #121212;
     --text: #ffffff;
-    --prim: #6499ff;
-    --scnd: #61e578;
+    --prim: #5690ff;
+    --scnd: #53e539;
     --scndtext: #5690ff;
     --thrd: rgba(255, 255, 255, 0.87);
     --menutext: #454545;
-    --line: 0.4px;
+    --line: 0.3px;
     --linescnd: 0.22px;
 
     background-color: var(--bg);
@@ -193,9 +193,9 @@ li {
 }
 
 .index a:hover > span{
-    color: #84FE23;
+    color: var(--scnd);
     opacity: 100;
-    border-bottom: 2.2px dotted #84FE23;
+    border-bottom: 2.2px dotted var(--scnd);
     z-index: 999;
 
 
@@ -374,14 +374,14 @@ transform: rotate(-10deg);
 }
 
 .text.en {
-    color: var(--scnd);
+    color: #7DF60E;
     letter-spacing: 1.1px;
     word-spacing: -2px;
     font-size: 14.5px;
     line-height: 20.7px;
     margin: 3px 0 2px 0;
 
-    -webkit-text-stroke-width: var(--linescnd);
+    -webkit-text-stroke-width: #7DF60E;
     -webkit-text-stroke-color: inherit;
     
           transition-property: color;
