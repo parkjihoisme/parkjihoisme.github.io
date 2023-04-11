@@ -23,60 +23,44 @@
 
 
     <div class="container">
-       <div class="text-container">
-
-       <p class="text title">『땀에 대하여: SWEAT/STITCH』 팝업전시</p>
-       
-        <p class="text"><span id="one">한권의 서점과 『땀에 대하여: SWEAT/STITCH』의 팝업 전시를 열었다. </span></p>
-        <span id="three"></span><span id="four"></span>
-        <p class="text en">
-            <span id="ein">A pop-up exhibition of 『SWEAT/STITCH』 held with of-onebook.</span>
-        </p>
-
-        <p class="text">
-            <span id="two">
-                
-            </span>
-
-        </p>
-        <p class="text en">
-            <span id="zwei"></span><span id="drei"></span><span id="vier"></span>
-        </p>
+        <div class="text-container">
+            <p class="text title">『땀에 대하여: SWEAT/STITCH』 팝업전시</p>
+            <p class="text"><span id="one">『땀에 대하여: SWEAT/STITCH』 팝업 전시를 위한 그래픽을 제작했다. </span></p>
+            <span id="three"></span><span id="four"></span>
+            <p class="text en">
+                <span id="ein">Design for a pop-up exhibition of 『SWEAT/STITCH』.</span>
+            </p>
+            <p class="text">
+            </p>
+            <p class="text en">
+                <span id="two"></span>
+                <span id="zwei"></span><span id="drei"></span><span id="vier"></span>
+            </p>
         </div>
 
-        <div class="wrk-container">
-            <img src="/works/sweat/1.png" alt="">
-            <img src="/works/sweat/1.jpg" alt="">
-            <img src="/works/sweat/6.jpg" alt="">
-            <img src="/works/sweat/2.jpg" alt="">
-            <img src="/works/sweat/18.jpg" alt="">
-            <img src="/works/sweat/5.jpg" alt="">
-            <img src="/works/sweat/8.jpg" alt="">
-            <img src="/works/sweat/10.jpg" alt="">
-            <img src="/works/sweat/15.jpg" alt="">
-            <img src="/works/sweat/21.jpg" alt="">
-            <img src="/works/sweat/29.jpg" alt="">
+        <div class="wrk-container" style=" gap: 6px; padding: 12px;">
+            <img src="/works/sweatExhibition/1.jpg" alt="">
+            <img src="/works/sweatExhibition/2.png" alt="">
+            <img src="/works/sweatExhibition/3.jpg" alt="">
+            <img src="/works/sweatExhibition/4.jpg" alt="">
+            <img src="/works/sweatExhibition/5.jpg" alt="">
+            <img src="/works/sweatExhibition/6.jpg" alt="">
         </div>
-        
-      
-      <div class="wrk-image-container">
-        <div class="presentation bg" style=" aspect-ratio: 16/9;">
-            <div class="pt-container">
-                <img class="pt one" src="/about/1.png" alt="">
-                <img class="pt two" src="/about/2.jpg" alt="">
-                <img class="pt three" src="" alt="">
-                <img class="pt four" src="" alt="">
 
+
+        <div class="wrk-image-container">
+            <div class="presentation bg" style=" aspect-ratio: 16/9;">
+                <div class="pt-container">
+                    <img class="pt one" src="/about/1.png" alt="">
+                    <img class="pt two" src="/about/2.jpg" alt="">
+                    <img class="pt three" src="" alt="">
+                    <img class="pt four" src="" alt="">
+                </div>
             </div>
+            <div class="presentation grain" style=" aspect-ratio: 16/9;"></div>
+            <div class="presentation vignette" style=" aspect-ratio: 16/9;"></div>
         </div>
-        <div class="presentation grain" style=" aspect-ratio: 16/9;"></div>
-        <div class="presentation vignette" style=" aspect-ratio: 16/9;"></div>
     </div>
-        
-        
-    </div>
-<div id="focus"></div>
-
 
     <script src="/script.js"></script>
     <script>
@@ -85,28 +69,18 @@
         var textbox = document.getElementsByClassName('text-container');
         var heightNum = 180 + textbox[0].clientHeight;
         var heightStyle = 'calc(100vh - ' + heightNum + 'px)';
-        var wrkTop = textbox[0].clientHeight  + 20 + 'px';
-        
-                        wrkContainer[0].style.top = wrkTop;
+        var wrkTop = textbox[0].clientHeight + 20 + 'px';
 
-        if(matchMedia('(max-width:480px)').matches){
-            
-            for (i=0; i<presentaion.length; i++){
+        wrkContainer[0].style.top = wrkTop;
+
+        if (matchMedia('(max-width:480px)').matches) {
+
+            for (i = 0; i < presentaion.length; i++) {
                 presentaion[i].style.height = heightStyle
             }
             wrkContainer[0].style.top = wrkTop;
-            
+
         }
-        
-    
-        
-        
-        
-    
     </script>
 
-</body>
-
-</html>
-
-
+</body></html>
