@@ -82,7 +82,7 @@ function presentationOpen(e) {
             e.target.style.color = 'var(--prim)'
 
         } else if (className == enList[i].id) {
-            e.target.style.color = 'var(--scndtext)'
+            e.target.style.color = 'var(--prim)'
             className = imgList[i].id
         }
 
@@ -134,7 +134,7 @@ function presentationTouch(e) {
         if (className == imgList[i].id) {
             e.target.style.color = 'var(--prim)'
         } else if (className == enList[i].id) {
-            e.target.style.color = 'var(--scndtext)'
+            e.target.style.color = 'var(--prim)'
             className = imgList[i].id
         }
     }
