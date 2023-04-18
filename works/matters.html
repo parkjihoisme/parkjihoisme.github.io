@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yes, it's me</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta name="google-site-verification" content="SrGBktEFzq-4tJ3dN-qv7iN1_Fxk8nN_lnJU-cY8CVA" />
+    <meta name="naver-site-verification" content="323c8cea69f2e095a46188c24577077386b1e791" />
+
+
+    <meta name="description" content="촉감이 다른 두 재료[밀가루, 묽은 밀가루 반죽]를 사용해 글씨를 써보며 재료의 차이가 글씨 형태에 어떻게 영향을 끼치는지 연구하였다.">
+    <meta name="distrubution" content="물질연구">
+    <meta name="location" content="seoul">
+    <meta name="keywords" content="물질연구, 박지호 디자이너, 디자이너 박지호">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta itemprop="name" content="물질연구">
+    <meta itemprop="description" content="촉감이 다른 두 재료[밀가루, 묽은 밀가루 반죽]를 사용해 글씨를 써보며 재료의 차이가 글씨 형태에 어떻게 영향을 끼치는지 연구하였다.">
+    <meta itemprop="image" content="">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="물질연구">
+    <meta property="og:description" content="촉감이 다른 두 재료[밀가루, 묽은 밀가루 반죽]를 사용해 글씨를 써보며 재료의 차이가 글씨 형태에 어떻게 영향을 끼치는지 연구하였다.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://parkjihoisme.github.io/">
+
+<style>
+    .wrk-container {
+        background: white;
+            box-shadow: 0px 0px 20px 12px white;
+
+        
+    }
+    
+    .wrk-container::after{
+            box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.4) inset;
+
+        
+    }
+    
+    .presentation.bg{
+        background: white;
+            box-shadow: 0px 0px 30px 15px white;
+
+    }
+    .vignette {
+    box-shadow: 0px 0px 300px 15px white inset;
+
+}
+    
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li class="menu-item"><a href="/works.html" style="color: var(--thrd); -webkit-text-stroke-width: var(--line); -webkit-text-stroke-color: var(--thrd);" class="menu-link">works</a></li>
+        <li class="menu-item"><a href="/lab.html" class="menu-link">lab</a></li>
+        <li class="menu-item"><a href="/blog.html" class="menu-link">blog</a></li>
+        <li class="menu-item"><a href="/about.html" class="menu-link">about</a></li>
+    </ul>
+
+
+    <div class="container">
+        <div class="text-container">
+            <p class="text title">물질연구</p>
+            <p class="text"><span id="one">촉감이 다른 두 재료[밀가루, 묽은 밀가루 반죽]를 사용해 글씨를 써보며 재료의 차이가 글씨 형태에 어떻게 영향을 끼치는지 연구하였다.</span></p>
+            <span id="three"></span><span id="four"></span>
+            <p class="text en">
+                <span id="ein">Drawed letters using two materials [batter, powder], studied how the difference in materials affects the shape of the letters. </span>
+            </p>
+            <p class="text">
+            </p>
+            <p class="text en">
+                <span id="two"></span>
+                <span id="zwei"></span><span id="drei"></span><span id="vier"></span>
+            </p>
+        </div>
+
+        <div class="wrk-container" style=" gap: 0px; padding: 0px;">
+            <img src="https://cdn.jsdelivr.net/gh/parkjihoisme/parkjihoisme.github.io/works/matters/2.gif" loading="lazy" alt="">
+            <img src="https://cdn.jsdelivr.net/gh/parkjihoisme/parkjihoisme.github.io/works/matters/1.gif" loading="lazy" alt="">
+            <img src="https://cdn.jsdelivr.net/gh/parkjihoisme/parkjihoisme.github.io/works/matters/3.gif" alt="">
+            <img src="https://cdn.jsdelivr.net/gh/parkjihoisme/parkjihoisme.github.io/works/matters/4.gif" alt="">
+            <img src="https://cdn.jsdelivr.net/gh/parkjihoisme/parkjihoisme.github.io/works/matters/5.jpg" alt="">
+            <img src="https://cdn.jsdelivr.net/gh/parkjihoisme/parkjihoisme.github.io/works/matters/6.jpg" alt="">
+        </div>
+
+
+        <div class="wrk-image-container">
+            <div class="presentation bg" style=" aspect-ratio: 16/9;">
+                <div class="pt-container">
+                    <img class="pt one" src="https://cdn.jsdelivr.net/gh/parkjihoisme/parkjihoisme.github.io/works/matters/presentation1.jpg" alt="">
+                    <img class="pt two" src="" alt="">
+                    <img class="pt three" src="" alt="">
+                    <img class="pt four" src="" alt="">
+                </div>
+            </div>
+            <div class="presentation grain" style=" aspect-ratio: 16/9;"></div>
+            <div class="presentation vignette" style=" aspect-ratio: 16/9;"></div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+    <script>
+        var presentaion = document.getElementsByClassName('presentation');
+        var wrkContainer = document.getElementsByClassName('wrk-image-container');
+        var textbox = document.getElementsByClassName('text-container');
+        var heightNum = 180 + textbox[0].clientHeight;
+        var heightStyle = 'calc(100vh - ' + heightNum + 'px)';
+        var wrkTop = textbox[0].clientHeight + 20 + 'px';
+
+        wrkContainer[0].style.top = wrkTop;
+
+        if (matchMedia('(max-width:480px)').matches) {
+
+            for (i = 0; i < presentaion.length; i++) {
+                presentaion[i].style.height = heightStyle
+            }
+            wrkContainer[0].style.top = wrkTop;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
